@@ -51,45 +51,9 @@ public class CompareDate {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        // С клавиатуры считывает год, месяц и день пользователя
-        System.out.println("Введите год:");
-        int userYear;
-        while (true) {
-            userYear = sc.nextInt();
-            if (userYear > 0) {
-                break;
-            } else {
-                System.out.print("Неправильный год. Введите год: ");
-            }
-        }
-
-        System.out.print("Введите число месяца: ");
-        int userMonth;
-        while (true) {
-            userMonth = sc.nextInt();
-            if (userMonth >= 1 && userMonth <= 12) {
-                break;
-            } else {
-                System.out.print("Неправильный месяц. Введите число месяца: ");
-            }
-        }
-
-        System.out.print("Введите день: ");
-        int userDay;
-        while (true) {
-            userDay = sc.nextInt();
-            if (userDay >= 1 && userDay <= 31) {
-                break;
-            } else {
-                System.out.print("Неправильный день. Введите день: ");
-            }
-        }
-
         // Создаём экземпляры дат
         DateComparator currentDate = new DateComparator(); // текущего времени
-        DateComparator userDate = new DateComparator(userYear, userMonth, userDay); // введенной пользователем
+        DateComparator userDate = new DateComparator(2017, 5, 25); // введенной пользователем
 
         // Выводим даты
         currentDate.outCurrent(); // текущую
